@@ -1,16 +1,16 @@
-Quoi
+## Quoi
 Tutoriel d'utilisation et d'installation d'un modèle trouvé sur le web
 
-Pourquoi
+## Pourquoi
 Voir qu'il existe des modeles déjà entrainés, comment les installer en local et les utiliser
 
-Pour qui
+## Pour qui
 Étudiants
 
-Prerequis
-installer Anaconda, spyder. Utiliser cmd anaconda.  
+## Prérequis
+Installer Anaconda, spyder. Utiliser cmd anaconda.  
 
-Contenu
+## Contenu
 Allez sur le site et testez l'IA avec des images par exemple trouvés sur internet
 https://huggingface.co/spaces/archietram/Medical_Image_Classifier
 
