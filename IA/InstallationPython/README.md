@@ -5,10 +5,10 @@ Comment installer le nécessaire pour commencer à faire du machine learning en 
 Permet de pouvoir suivre et éxecuter les scipts de la plupart des tutoriels sur l'IA 
 
 ## Pour qui
-Etudiants
+Étudiants
 
 ## Prérequis
-un ordinateur
+Un ordinateur
 
 ## Contenu
 Il faut installer Anaconda, puis avec Anaconda il faut installer Spyder et des libraires python : opencv-python et PyTorch
