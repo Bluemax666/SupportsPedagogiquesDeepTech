@@ -12,7 +12,7 @@ Anaconda, Spyder. Savoir utiliser cmd anaconda. Librairies pytorch, python-openc
 
 ## Contenu
 
-### Instructions
+### Instructions:
 Il faut installer la librairie python mediapipe en plus par rapport autre autres tutoriels que j'ai fait sur l'IA. Vous pouvez faire la commande "pip install mediapipe" dans la console anaconda (lancée en mode administrateur sur Windows).
 
 Téléchargez le fichier hand_detect.py, ouvrez le avec Spyder.
