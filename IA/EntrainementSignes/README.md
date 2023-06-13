@@ -40,7 +40,7 @@ D'autres métriques peuvent étre calculées à parir de cette matrice de confus
 ### Utilisation interessantes:
 On pourrait imaginer un algorithme similaire qui pourrait détécter et traduire la langue des signes française pour aider les sourds et les malentendants.
 
-### Exemple de problème éthique lié à l'IA:
+### Exemple de problèmes éthiques liés à l'IA:
 La qualité des résulats d'un modèle dépend beacoup du jeu de données qui a servi à l'entraîner. Par exemple si on veut faire modèle permettant de classifier des mélanome sur la peau et qu'on l'entraine en grande majorité avec des images de peaux claires, le modèle pourrait beaucoup moins bien fonctionner sur des images de peaux foncées. Des biais dans le jeu de données peuvent donc provoquer des discriminations éthniques ou raciales.
 Pour en apprendre plus sur comment développer les IA les plus éthiques possibles vous pouvez consulter ce rapport : https://esante.gouv.fr/sites/default/files/media_entity/documents/ethic_by_design_guide_vf.pdf
 qui présente des "Recommandations de bonnes pratiquespour intégrer l’éthique dès le développement des solutions d’Intelligence Artificielle en Santé", sur les pages 60-61 il y a un tableau qui donne les éléments principaux et qui je trouve récapitule bien le document.
