@@ -32,13 +32,11 @@ Ouvrez le fichier app.py dans spyder et appuyez sur la flèche verte en haut pou
 Vous verrez sûrement une erreur ModuleNotFoundError: No module named 'gradio'
 ça veut dire qu'il manque une librairie nomée 'gradio' donc on l'installe dans le terminal de commande anaconda en faisant "pip install gradio"
 
-lancez le script.
+Lancez le script.
 
 Il faut savoir que gradio permet de créer une interface web en local pour le code python
 dans la console vous pouvez voir écrit "Running on local URL:  http://127.0.0.1:7860"
 il faut aller à l'adresse "http://127.0.0.1:7860" dans votre navigateur. La page est ouverte dans un navigateur mais de base il n'y que vous qui avez accès à cette page.
+Vous aurez la même interface que sur le site mais le modèle tournera en local sur votre pc.
 
-Il est possible d'utiliser ce modele pour par exemple classifier plusieurs images en même temps modifiant le code, pour faire ça, il faut être capable de séparer la partie interface de la partie utilisation du modèle.
-
-Utilisation concrete :
-Vous avez un dossier contenant pleins d'images de tout type et vous voulez les organiser dans des dossiers differents en fonction de leur type
+Il est possible d'utiliser ce modele pour par exemple classifier plusieurs images en même temps modifiant le code, pour faire ça, il faut être capable de séparer la partie interface de la partie utilisation du modèle. Un exemple concret d'utilisation de ce modèle : Vous avez un dossier contenant pleins d'images de tout type et vous voulez les organiser dans des dossiers differents en fonction de leur type.
