@@ -1,8 +1,8 @@
 ## Quoi
-Comment installer le nécessaire pour commencer à faire du machine learning en python
+Tutoriel pour installer le nécessaire pour commencer à faire du machine learning en python
 
 ## Pourquoi
-Permet de pouvoir suivre et éxecuter les scipts de la plupart des tutoriels sur l'IA 
+Permet de pouvoir suivre la plupart de mes tutoriels sur l'IA
 
 ## Pour qui
 Étudiants
@@ -28,3 +28,6 @@ Anaconda possede un terminal de commande il est utilisé pour gérer l'environnm
 
 Pour installer opencv-python il fait faire la commande "pip install opencv-python".
 La librairie Opencv est très pratique pour manipuler des images
+
+Pour télécharger les dossiers contenant le code, le plus simple est d'aller à la racine de ce dépot github : https://github.com/Bluemax666/SupportsPedagogiquesDeepTech
+Et de cliquer sur le bouton vert "code" puis sur "Download ZIP".
