@@ -5,7 +5,7 @@ Script python permettant d'entrainer une IA qui reconnait des signes de la main 
 Permettre à l'étudiant de se rendre compte du potentiel de l'IA pour des applications en temps réel, mieux comprendre le fonctionement d'une IA en touchant à des variables du code
 
 ## Pour qui
-Etudiants
+Étudiants
 
 ## Prérequis 
 Anaconda, Spyder. Savoir utiliser cmd anaconda. Librairies pytorch, python-opencv, mediapipe
