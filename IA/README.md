@@ -4,6 +4,6 @@
 - ClassificationIA
 - InstallationPython
 
-# TODO :
+## ce qui reste à faire :
 Commenter le code
 
