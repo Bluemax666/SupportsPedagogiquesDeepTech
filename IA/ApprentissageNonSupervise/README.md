@@ -1,18 +1,18 @@
 ## Quoi:
-Un script python qui peut etre lancé et et un peu modifié ou il y a un apprentissage non supervisé des caratéristiques des images en utilisant un VAE. 
+Un script python faisant un apprentissage non supervisé sur images en utilisant un Variational AutoEncoder.
 
 ## Pourquoi:
 Comprendre qu'il n'y pas forcément besoin de donées labelisées et qu'un algorithme peut extraire automatiquement les caractéristiques principales d'un ensemble d'images.
-Commencer à modifier des parametres dans le code pour mieux comprendre.  
+Pourvoir mieux comprendre en modifiant certains paramètres dans le code. 
 
 ## Pour qui:
 Etudiants
 
 ## Prérequis: 
-Anaconda, Spyder. Savoir utiliser cmd anaconda, librairies pytorch, python-opencv
+Anaconda, Spyder. Librairies pytorch, python-opencv
 
 Contenu
-Vous allez entraîner un VAE (Variational AutoEncoder), c'est un modèle qui utilise un réseau de neuronne pour essayer de compresser (l'encoder) dans un espace très restreint puis de décompresser l'image (le decoder). Le modele essaye de reconstruire l'image pour qu'elle la plus possible de l'image originelle après ce processus. Dans cette exemple on va compresser des images en couleur de 64x64 pixels en un vecteur composé de par exemple 4 valeurs. (On peut utiliser des modèles plus gros mais ils prennent plus de temps à etre entraînés et il faut dans l'idéal les faire tourner sur cartes graphiques puissantes). On se retrouve avec un modèle capable se synthéthiser chaque image en 4 nombres, ce qui peut permettre après de faire du clustering ou d'accelerer un apprentissage supervisé utilisant ce type d'images par la suite.
+Le script python permet d'entraîner un VAE (Variational AutoEncoder), c'est un modèle qui utilise un réseau de neurones qui va apprendre à compresser une image en ses caractéristiques principales, puis qui va apprendre à reconstruire l'image à l'indentique à partir de ces caractéristiques. Ici se sont des images en couleur de 64x64 pixels qui vont etres compressées en un vecteur composé de 4 valeurs. (Il serait possible d'utiliser des images plus grandes mais le modèle mettrait beacuoup plus de temps à etre entrainé). Si l'entraînement s'est bien passé, on se retrouve avec un modèle capable se synthéthiser chaque image en juste 4 valeurs, ce qui peut permettre apres par exemple de faire du clustering ou d'accélerer un apprentissage supervisé utilisant type d'images par la suite.
 Le modlèle n'est capable d'encoder de manière interessante que des images du même type que celles qui sont présentes dans le jeu de donées qui a servi à l'entraînement.  
 
 #Téléchargez le code dans le github 
