@@ -4,7 +4,7 @@
 - ClassificationIA
 - InstallationPython
 
-## ce qui reste à faire :
+# Ce qui reste à faire :
 - Commenter le code
 - Mettre en évidence les variables modifiables
 - Faire tester les supports
