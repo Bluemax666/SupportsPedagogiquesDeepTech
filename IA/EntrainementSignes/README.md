@@ -31,4 +31,17 @@ Il y a aussi la possiblité d'arreter proprement le programme en appuyant sur la
 Vous pouvez par exemple essayer de faire apprendre les mots "bonjour", "oui", "non" en prenant comme référence les signes disponibles sur le dictionnaire des signes francais: https://dico.elix-lsf.fr/dictionnaire/bonjour
 Il y a quelques paramètres modifiables indiqués dans le code comme les différents mots et leur touche associé, la taille du réseau de neurones ou le learing rate.
 
-### Dangers en lien avec l'IA:
+### Vocabulaire en lien avec l'IA:
+Ici l'IA est un réseau de neurones qui est entrainé à prédire à partir d'une image sa classe associée, le réseau de neurones change ses poids pour permettre de réduire son erreur lors de de l'entrainement. Il y a plusieurs métriques qui peuvent être mesurées pendant l'entraînement d'un modèle de classification. les principales sont La loss, l'accuracy et la matrice de confusion.
+La loss est une mesure de l'erreur que fait le réseau de neurones pendant son entraînement, plus cette valeur est basse mieux c'est, sauf dans certains cas où le modèle a "sur appris". On dit qu'il a "sur appris" quand il a appris par coeur les donées d'entrainement et qu'il n'est plus capable de généraliser à d'autres donées, on appele aussi ça l'overfitting. 
+L'accuracy est la proportion de prédictions correctes sur l'ensenble des prédictions du modèle. La matrice de confusion apporte plus de détails, lorsque qu'on a un modèle de classification binaire qui prédit soit "oui" soit "non", cette matrice est composée de 4 cases : le nombre de vrais positifs, de faux négatifs, de de faux positifs et de vrais négatifs. 
+D'autres métriques peuvent étre calculées à parir de cette matrice de confusion comme la précision, le recall, le F1 score. Si vous voulez en savoir plus sur le calcul de ces métriques vous pouvez aller voir ce lien : https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234
+
+### Utilisation interessantes:
+On pourrait imaginer un algorithme similaire qui pourrait détécter et traduire la langue des signes française pour aider les sourds et les malentendants.
+
+### Exemple de problèmes éthiques liés à l'IA:
+La qualité des résulats d'un modèle dépend beacoup du jeu de données qui a servi à l'entraîner. Par exemple si on veut faire modèle permettant de classifier des mélanome sur la peau et qu'on l'entraine en grande majorité avec des images de peaux claires, le modèle pourrait beaucoup moins bien fonctionner sur des images de peaux foncées. Des biais dans le jeu de données peuvent donc provoquer des discriminations éthniques ou raciales.
+Pour en apprendre plus sur comment développer les IA les plus éthiques possibles vous pouvez consulter ce rapport : https://esante.gouv.fr/sites/default/files/media_entity/documents/ethic_by_design_guide_vf.pdf
+qui présente des "Recommandations de bonnes pratiquespour intégrer l’éthique dès le développement des solutions d’Intelligence Artificielle en Santé", sur les pages 60-61 il y a un tableau qui donne les éléments principaux et qui je trouve récapitule bien le document.
+
