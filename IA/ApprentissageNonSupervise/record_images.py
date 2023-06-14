@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Mon Jun  5 16:13:39 2023
-
 @author: Maxime FAURENT
 """
 
