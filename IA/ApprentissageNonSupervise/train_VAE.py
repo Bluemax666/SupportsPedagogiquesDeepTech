@@ -1,3 +1,7 @@
+"""
+@author: Maxime FAURENT
+"""
+
 """ Training VAE """
 import torch
 import torch.utils.data
