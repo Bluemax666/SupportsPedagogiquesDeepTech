@@ -20,12 +20,12 @@ while cap.isOpened():
     cv2.imshow("image", image)
     
     k = cv2.waitKey(10)
-    if  k & 0xFF == 27 or k == ord('r'):
+    if  k & 0xFF == 27 or k == ord('q'):
         cap.release()
         cv2.destroyAllWindows()
         break
     
-    elif k == ord('s'):
+    elif k == ord('r'):
         cv2.imwrite(f"train_{idx}.png", image)
         
         idx += 1
