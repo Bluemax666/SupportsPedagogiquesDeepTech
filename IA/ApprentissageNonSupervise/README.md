@@ -24,7 +24,7 @@ Le fichier "record_images.py" permet d'enregistrer les images dans le dossier "i
 Le fichier "train_VAE.py" entraîne un modèle de le sauvegarde.
 Le fichier "decode_VAE.py" permet de visualiser ce qu'a appris le modèle.
 
-Vous ppourrez voir, modifier et executer le code en utilsant Spyder.
+Vous pouvez voir, modifier et exécuter le code en utilsant Spyder.
 Pour commencer il faut mettre des images dans le dossier "images" entre 200 et 20 000 images c'est bien globalement mais vous pouvez quand même tester avec moins si vous voulez.
 
 #Ensuite dans le fichier train_VAE.py vous pouvez modifier quelques variables dans la zone ***
