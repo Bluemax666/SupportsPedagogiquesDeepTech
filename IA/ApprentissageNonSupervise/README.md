@@ -9,7 +9,7 @@ Pourvoir mieux comprendre en modifiant certains paramètres dans le code.
 Étudiants
 
 ## Prérequis: 
-Anaconda, Spyder. Librairies pytorch, python-opencv
+Anaconda, Spyder. Librairies PyTorch, python-opencv
 
 ## Contenu
 ### Instructions:
