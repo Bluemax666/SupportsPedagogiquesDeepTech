@@ -1,5 +1,5 @@
 ## Quoi:
-Un script python faisant un apprentissage non supervisé sur images en utilisant un Variational AutoEncoder.
+Un script python faisant un apprentissage non supervisé sur des images en utilisant un Variational AutoEncoder.
 
 ## Pourquoi:
 Comprendre qu'il n'y pas forcément besoin de donées labelisées et qu'un algorithme peut extraire automatiquement les caractéristiques principales d'un ensemble d'images.
