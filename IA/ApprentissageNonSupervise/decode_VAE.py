@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jan 22 17:59:50 2020
-
 @author: Maxime FAURENT
 """
 
