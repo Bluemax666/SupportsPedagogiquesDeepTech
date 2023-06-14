@@ -2,13 +2,9 @@
 """
 Created on Mon May  1 01:08:26 2023
 
-@author: maxim
+@author: Maxime
 """
 
-"""
-sudo -i
-sudo /home/maxime/anaconda3/bin/python /home/maxime/Code/Projet_labo/projet2/hand_detect.py
-"""
 import cv2
 import numpy as np
 import torch
