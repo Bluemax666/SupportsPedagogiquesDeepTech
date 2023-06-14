@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Mon May  1 01:08:26 2023
-
-@author: Maxime
+@author: Maxime FAURENT
 """
 
 import cv2
