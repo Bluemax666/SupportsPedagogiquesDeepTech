@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 @author: Maxime FAURENT
 """
@@ -6,7 +7,6 @@ import cv2
 import numpy as np
 import torch
 from torch import nn
-import keyboard
 from torch.utils.data import Dataset, DataLoader, TensorDataset
 import mediapipe as mp
 
@@ -17,7 +17,8 @@ class_dict = {
 "Non" : "n",
 "Rien" : "r" 
 }
-model_name = "Base"
+
+model_name = "Sign_model"
 
 def idx2label(idx):
     if idx==-1:
@@ -26,14 +27,13 @@ def idx2label(idx):
     return list(class_dict.keys())[idx]
 
 
+batch_size = 4
+hidden_dim = 512
 
+X, Y = [], []
 nb_features = 21*2*2 #21 points x 2 axis x 2 hands  
 nb_class = len(class_dict)
 
-X, Y = [], []
-batch_size = 4
-
-hidden_dim = 512
 model = nn.Sequential(
     nn.Linear(nb_features, hidden_dim),
     nn.ReLU(),
@@ -45,6 +45,7 @@ model = nn.Sequential(
     nn.Linear(hidden_dim, nb_class),
     nn.Softmax(dim=1)
 )
+
 
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=5e-5)
@@ -88,7 +89,7 @@ def train_model(X, Y, epochs=20):
                 running_test_loss += loss.item()
         # display statistics
         print(f'[{epoch + 1} loss: {running_train_loss / len(train_loader.dataset):.5f}, \
-                                   {running_test_loss / len(test_loader.dataset):.5f}')
+                             test_loss: {running_test_loss / len(test_loader.dataset):.5f}')
         
 
 def predict_label_prob(net_input):
@@ -103,10 +104,10 @@ def get_pred_label_name(prediction):
     return pred_label_name
     
 
-def get_label_from_key():
+def get_label_from_key(k):
     label = -1
     for i, key in enumerate(class_dict.values()):
-        if keyboard.is_pressed(key):
+        if k == ord(key):
             label = i
             break
         
@@ -139,6 +140,7 @@ current_pred = np.zeros(nb_class)
 
 cap = cv2.VideoCapture(0)
 frame_idx = 0
+rec_label = -1
 with mp_hands.Hands(
     model_complexity=0,
     min_detection_confidence=0.5,
@@ -147,20 +149,19 @@ with mp_hands.Hands(
         success, image = cap.read()
         if not success:
           print("Ignoring empty camera frame.")
-          # If loading a video, use 'break' instead of 'continue'.
           continue
     
-        # To improve performance, optionally mark the image as not writeable to
-        # pass by reference.
         image.flags.writeable = False
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         results = hands.process(image)
         
+        hand_in_frame = False
         left_hand_points = []
         right_hand_points = []
         nb_hands = 0
-        rec_label = -1
+        
         if results.multi_hand_landmarks is not None and len(results.multi_hand_landmarks) > 0:
+            hand_in_frame = True
             nb_hands = len(results.multi_hand_landmarks)
             for hand_idx in range(min(nb_hands, 2)):
                 handedness = results.multi_handedness[hand_idx].classification[0].label
@@ -192,26 +193,6 @@ with mp_hands.Hands(
                 net_input = np.concatenate((process_landmarks(left_hand_points),
                                             process_landmarks(right_hand_points)))
             
-            #print(net_input)
-            rec_label = get_label_from_key()
-            if rec_label != -1 and frame_idx % 2 == 0:
-                X.append(net_input)
-                Y.append(rec_label)
-            else:
-                cv2.waitKey(5)
-             
-                
-        if keyboard.is_pressed('t'):
-            train_model(X, Y)
-            
-        elif keyboard.is_pressed('s'):
-            torch.save(model.state_dict(), model_path+model_name)
-            print(f"model : {model_name} saved")
-        
-        elif keyboard.is_pressed('l'):
-            model.load_state_dict(torch.load(model_path+model_name), strict=False)
-            print(f"model : {model_name} loaded")
-            
     
         # Draw the hand annotations on the image.
         image.flags.writeable = True
@@ -238,8 +219,26 @@ with mp_hands.Hands(
         cv2.imshow('MediaPipe Hands', image)
         k = cv2.waitKey(10)
         frame_idx = (frame_idx+1) % 5
+        
+        if hand_in_frame:
+            rec_label = get_label_from_key(k)
+            if rec_label != -1 and frame_idx % 2 == 0:
+                X.append(net_input)
+                Y.append(rec_label)
+        
         if  k & 0xFF == 27 or k == ord('q'):
-          break
+            break
+      
+        elif k == ord('t'):
+            train_model(X, Y)
+            
+        elif k == ord('s'):
+            torch.save(model.state_dict(), model_name)
+            print(f"model : {model_name} saved")
+        
+        elif k == ord('l'):
+            model.load_state_dict(torch.load(model_name), strict=False)
+            print(f"model : {model_name} loaded")
       
   
 cap.release()
