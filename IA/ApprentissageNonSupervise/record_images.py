@@ -3,7 +3,7 @@
 """
 Created on Mon Jun  5 16:13:39 2023
 
-@author: maxime
+@author: Maxime FAURENT
 """
 
 import cv2
@@ -24,7 +24,7 @@ while cap.isOpened():
     cv2.imshow("image", image)
     
     k = cv2.waitKey(10)
-    if  k & 0xFF == 27 or k == ord('q'):
+    if  k & 0xFF == 27 or k == ord('r'):
         cap.release()
         cv2.destroyAllWindows()
         break
