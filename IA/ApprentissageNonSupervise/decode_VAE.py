@@ -2,7 +2,7 @@
 """
 Created on Wed Jan 22 17:59:50 2020
 
-@author: maxim
+@author: Maxime FAURENT
 """
 
 import cv2
