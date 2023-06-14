@@ -17,14 +17,7 @@ class_dict = {
 "Non" : "n",
 "Rien" : "r" 
 }
-model_path = "/home/maxime/Code/Projet_labo/projet2/"
 model_name = "Base"
-
-# class_dict = {k:k for k in "abcdefghijklmnopqrstuvwxyz"}
-# model_name = "Alphabet"
-
-# class_dict = {k:k for k in "azertyuiop"}
-# model_name = "numb"
 
 def idx2label(idx):
     if idx==-1:
