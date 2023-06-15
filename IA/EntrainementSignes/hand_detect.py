@@ -13,15 +13,15 @@ import mediapipe as mp
 
 #dictionnaire contenant les mots que le modèle peut prédire
 #et la touche qu'il faut appuyer pour faire apprence chaque mot
-class_dict = {
-"Bonjour" : "b",
+class_dict = { #***
+"Bonjour" : "b", 
 "Oui" : "o",
 "Non" : "n",
 "Rien" : "r" 
-}
+} #***
 
 #nom du fichier du modèle sauvegardé
-model_name = "Sign_model"
+model_name = "Sign_model" #*** ***
 
 
 #convertit un id (numéro de la classe) en label (nom de la classe)
@@ -38,7 +38,7 @@ hidden_dim = 512 #***64-2048***
 learning_rate=5e-5 #***0.000005-0.0005***
 #proportion des exemple qui ne seront utilisés que pour tester la performance du modèle
 test_data_proportion = 0.2 #***0.05-0.5***
-#nombre d'elements qui sont passés en même temps dans le modèle pendant l'entrainement
+#nombre d'éléments qui sont passés en même temps dans le modèle pendant l'entrainement
 batch_size = 4  #***2-64***
 
 
